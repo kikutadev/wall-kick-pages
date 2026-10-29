@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#050b13">
   <link rel="icon" href="data:,">
   <title>WALL KICK — Speedfall</title>
-  <script type="module" crossorigin src="./assets/index-CgrSwF0-.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-jELm-W8t.css">
+  <script type="module" crossorigin src="./assets/index-Dhr1ewrL.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DR5j83pV.css">
 </head>
 <body>
   <main id="game" class="panel-open">
@@ -15,6 +15,7 @@
     <div id="vignette" aria-hidden="true"></div>
     <div id="rush" aria-hidden="true"></div>
     <div id="wall-flash" aria-hidden="true"></div>
+    <div id="hazard-hit" aria-hidden="true"></div>
     <div id="impact" aria-live="polite"></div>
 
     <div id="hud">
@@ -29,13 +30,14 @@
         <span>THOUGHT</span><div class="focus-track"><div id="focus-fill"></div></div><strong id="focus-number">0%</strong>
       </div>
       <div id="combo" class="combo"></div>
+      <div id="avoid-cue" class="avoid-cue">DRAG TO DODGE <span>↔ ↕</span></div>
       <div id="kick-cue" class="kick-cue">
         <div class="cue-text"><span id="kick-side">RIGHT</span> WALL <strong id="kick-ready">APPROACH</strong></div>
         <div class="cue-track"><div id="cue-fill"></div><div class="cue-zone"></div></div>
       </div>
       <div class="bottom">
         <div id="depth" class="depth">0 <small>m DESCENDED</small></div>
-        <div class="bottom-help">TAP THE EDGE OF EACH KICK</div>
+        <div class="bottom-help">DRAG TO DODGE · TAP TO KICK</div>
       </div>
     </div>
 
@@ -56,9 +58,9 @@
         <div class="panel-overline">SLAPJAM #2 · SPEED</div>
         <h1>WALL<br><em>KICK</em></h1>
         <div class="panel-rule"></div>
-        <p id="panel-description">真下に落ちる。壁を蹴る。もっと速くなる。<br>思考加速が発動したら、動き回るターゲットを5回タップ。</p>
+        <p id="panel-description">障害物をドラッグで避けながら落下。タップで壁を蹴ってさらに加速。<br>思考加速が発動したら、動き回るターゲットを5回タップ。</p>
         <div class="panel-instructions">
-          <div><span>01</span><strong>通常</strong><small>壁の直前で画面タップ</small></div>
+          <div><span>01</span><strong>通常</strong><small>ドラッグで回避・タップで蹴る</small></div>
           <div><span>02</span><strong>思考加速</strong><small>表示地点を5回タップ</small></div>
           <div><span>03</span><strong>目標</strong><small>60秒で最深部へ</small></div>
         </div>
@@ -67,6 +69,7 @@
         <p class="panel-foot">縦画面推奨 · タップ / クリック / SPACE</p>
       </div>
     </section>
+    <button id="spin-toggle" aria-label="連続キック回転演出切り替え" type="button">SPIN ON</button>
     <button id="sound-toggle" aria-label="サウンド切り替え" type="button">SOUND ON</button>
   </main>
 </body>
